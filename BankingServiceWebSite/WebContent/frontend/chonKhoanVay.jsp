@@ -76,7 +76,7 @@ if (request.getParameter("userid") != null && request.getParameter("cusname") !=
 	%>
 
 	<div style='margin-top: 20px'>
-		<button onclick="location.href='userInfo.jsp?name=<%=cusName%>';">
+		<button id="quay_lai_trang_danh_sach_kh" onclick="location.href='userInfo.jsp?name=<%=cusName%>';">
 			Quay lại
 		</button>
 	</div>
@@ -163,12 +163,12 @@ if (request.getParameter("userid") != null && request.getParameter("cusname") !=
 	} else {
 	%>
 	<div style='margin-top: 20px'>
-		<button onclick="location.href='userInfo.jsp?name=<%=cusName%>';">
+		<button id="kkv_quay_lai_trang_danh_sach_kh" onclick="location.href='userInfo.jsp?name=<%=cusName%>';">
 			Quay lại
 		</button>
 	</div>
 
-	<h2>Khách hàng không có khoản vay</h2>
+	<h2 id="khach_hang_khong_co_khoan_vay">Khách hàng không có khoản vay</h2>
 	<%
 	}
 	%>

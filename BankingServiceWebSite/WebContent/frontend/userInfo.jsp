@@ -77,7 +77,7 @@ if (name != null && name.length() > 0) {
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div style='margin-top: 20px'>
-		<a href="searchUser.jsp"><button>Quay lại</button></a>
+		<a id="quay_lai_trang_tim_kiem_kh" href="searchUser.jsp"><button>Quay lại</button></a>
 	</div>
 	<%
 	if (name != null && name.length() > 0) {
