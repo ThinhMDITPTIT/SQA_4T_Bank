@@ -76,7 +76,7 @@ input.specific:hover {
       } 
       %>
       <div style='margin-top: 20px'>
-		<a href="searchUser.jsp"><button>Quay lại</button></a>
+		<a id="cancel_button" href="searchUser.jsp"><button>Quay lại</button></a>
 	</div>
 	<div align="center">
 		<h1>Thêm Khách hàng mới</h1>

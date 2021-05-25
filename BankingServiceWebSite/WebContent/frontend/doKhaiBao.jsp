@@ -18,8 +18,8 @@
 	
 	boolean kq = tokhaiDao.addTokhai(tk);
 	if(kq){
-		response.sendRedirect("DSKhaiBao.jsp?customerid="+customerID+"&cusname="+cusName);
+		response.sendRedirect("DSKhaiBao.jsp?customerid="+customerID+"&cusname="+cusName+"&addtkmess=success");
 	}else{
-		response.sendRedirect("KhaiBao.jsp");
+		response.sendRedirect("KhaiBao.jsp?addtkmess=fail");
 	}
 %>

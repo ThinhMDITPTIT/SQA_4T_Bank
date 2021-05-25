@@ -54,7 +54,7 @@ button:hover {
 	<jsp:include page="header.jsp"></jsp:include>
 	<div align="center" style='margin-top: 50px'>
 		<h2>
-			<a href="searchUserForKhaiBao.jsp"><button>Vay lãi</button></a>
+			<a id="vay_lai_button" href="searchUserForKhaiBao.jsp"><button>Vay lãi</button></a>
 		</h2>
 		<h2>
 			<a href="searchUser.jsp"><button>Trả tiền</button></a>

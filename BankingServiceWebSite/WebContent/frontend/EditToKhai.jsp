@@ -87,10 +87,10 @@ button:hover {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>Khai báo thông tin</title>
+<title>Sửa thông tin khai báo</title>
 </head>
 <body>
-	<h2>Khai báo thông tin</h2>
+	<h2>Sửa thông tin khai báo</h2>
 	<%	if(request.getParameter("mess") !=null && request.getParameter("mess").equalsIgnoreCase("fail")){
           %><script>
           	window.alert("Quá trình update xảy ra lỗi, vui lòng thử lại!!!");
@@ -166,40 +166,40 @@ button:hover {
 				<input type="text" value="<%=tk.getDiachicongty() %>" name="Diachicongty"id="Diachicongty" required>
 			<div>
 				<label for="psw-repeat"><b>Mức thu nhập </b><a
-					style="color: red;">(*)</a></label> <input type="radio" name="Mucluong"
-					value="1 Trieu den 5 trieu"> <label for="Mucluong">1
-					triệu - 5 triệu</label> <input type="radio" name="Mucluong"
+					style="color: red;">(*)</a></label> <input type="radio" name="Mucluong" required
+					id="mucluong1" value="1 Trieu den 5 trieu"> <label for="Mucluong">1
+					triệu - 5 triệu</label> <input type="radio" name="Mucluong" id="mucluong2"
 					value="tu 5 den 10 trieu "> <label for="Mucluong">từ
-					5 triệu đến 10 triệu</label> <input type="radio" name="Mucluong"
+					5 triệu đến 10 triệu</label> <input type="radio" name="Mucluong" id="mucluong3"
 					value="tu 10 den 20 trieu "> <label for="Mucluong">từ
-					10 triệu đến 20 triệu</label> <input type="radio" name="Mucluong"
+					10 triệu đến 20 triệu</label> <input type="radio" name="Mucluong" id="mucluong4"
 					value="tren 20 trieu "> <label for="Mucluong">trên
 					20 triệu</label>
 			</div>
 			<br>
 			<div>
 				<label for="psw-repeat"><b>Mức chi tiêu hằng tháng </b><a
-					style="color: red;">(*)</a></label> <input type="radio"
-					name="Chitieuhangthang" value=" 1 Trieu den 5 trieu"> <label
-					for="Chitieuhangthang">1 triệu - 5 triệu</label> <input
+					style="color: red;">(*)</a></label> <input type="radio" required
+					id="chitieu1" name="Chitieuhangthang" value=" 1 Trieu den 5 trieu"> <label
+					for="Chitieuhangthang">1 triệu - 5 triệu</label> <input id="chitieu2"
 					type="radio" name="Chitieuhangthang" value="tu 5 den 10 trieu ">
-				<label for="Chitieuhangthang">từ 5 triệu đến 10 triệu</label> <input
+				<label for="Chitieuhangthang">từ 5 triệu đến 10 triệu</label> <input id="chitieu3"
 					type="radio" name="Chitieuhangthang" value="tu 10 den 20 trieu ">
-				<label for="Chitieuhangthang">từ 10 triệu đến 20 triệu</label> <input
+				<label for="Chitieuhangthang">từ 10 triệu đến 20 triệu</label> <input id="chitieu4"
 					type="radio" name="Chitieuhangthang" value="tren 20 trieu ">
 				<label for="Chitieuhangthang">trên 20 triệu</label>
 			</div>
 
 			<div class="clearfix">
-				<button type="button" class="cancelbtn" onclick="cancel()">Cancel</button>
-				<button type="submit" class="signupbtn">Submit</button>
+				<button id="cancel_kb_button" type="button" class="cancelbtn" onclick="cancel()">Cancel</button>
+				<button id="submit_button" type="submit" class="signupbtn">Submit</button>
 			</div>
 		</div>
 	</form>
 </body>
 <script type="text/javascript">
 	function cancel() {
-		window.location.href = "./userInfo.jsp";
+		window.location.href = "./DSKhaiBao.jsp?customerid="+<%=customerIDStr%>;
 	}
 </script>
 </html>

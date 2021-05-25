@@ -33,7 +33,7 @@
 	if(kqAddCmnd){
 		boolean kqAddCustomer = usersDAO.addCustomer(customer);
 		if(kqAddCustomer){
-			response.sendRedirect("./searchUser.jsp?mess=success");
+			response.sendRedirect("./searchUserForKhaiBao.jsp?mess=success");
 		}
 	}else{
 		response.sendRedirect("addCustomer.jsp?mess=fail");

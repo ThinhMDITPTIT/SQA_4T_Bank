@@ -16,13 +16,13 @@ public class ToKhaiDAO extends DAO {
 	public boolean addTokhai(ToKhai tokhaiobj) throws ClassNotFoundException, SQLException {
 		boolean kq = false;
 		System.out.println(tokhaiobj.getChucvu());
-		String sql = "INSERT INTO `tokhai`(`userID`,`Nghenghiep`,`Chucvu`,`Diachicongty`,`Tencongty`,`Mucluong`,`Chitieuhangthang`) VALUES (?,?,?,?,?,?,?);";
+		String sql = "INSERT INTO `tokhai`(`userID`,`Nghenghiep`,`Chucvu`,`Tencongty` ,`Diachicongty`,`Mucluong`,`Chitieuhangthang`) VALUES (?,?,?,?,?,?,?);";
 		try (PreparedStatement pre = connection.prepareStatement(sql)) {
 			pre.setInt(1, tokhaiobj.getUserID());
 			pre.setString(2, tokhaiobj.getNghenghiep());
 			pre.setString(3, tokhaiobj.getChucvu());
-			pre.setString(4, tokhaiobj.getDiachicongty());
-			pre.setString(5, tokhaiobj.getTencongty());
+			pre.setString(5, tokhaiobj.getDiachicongty());
+			pre.setString(4, tokhaiobj.getTencongty());
 			pre.setString(6, tokhaiobj.getMucluong());
 			pre.setString(7, tokhaiobj.getChitieuhangthang());
 			pre.executeUpdate();

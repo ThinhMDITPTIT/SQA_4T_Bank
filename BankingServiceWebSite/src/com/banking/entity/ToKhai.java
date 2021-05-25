@@ -11,7 +11,7 @@ public class ToKhai {
 		super();
 	}
 
-	public ToKhai(int userID, String nghenghiep, String chucvu, String diachicongty, String tencongty, String mucluong,
+	public ToKhai(int userID, String nghenghiep, String chucvu, String tencongty,String diachicongty, String mucluong,
 			String chitieuhangthang) {
 		super();
 		this.userID = userID;

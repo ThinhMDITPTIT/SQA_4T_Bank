@@ -50,7 +50,7 @@ button:hover {
 		<a href="main.jsp"><button>Quay lại</button></a>
 	</div>
 	<div style='margin-top: 20px'>
-		<a href="addCustomer.jsp"><button>Thêm khách hàng</button></a>
+		<a id="them_kh_button" href="addCustomer.jsp"><button>Thêm khách hàng</button></a>
 	</div>
 	<h2>Tìm kiếm khách hàng</h2>
 	<table>

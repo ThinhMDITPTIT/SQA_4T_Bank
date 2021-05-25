@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class DAO {
 	private static String DB_NAME = "sqa";
 	private static String USER_NAME = "root";
-	private static String PASSWORD = "admin";
+	private static String PASSWORD = "t160397";
 
 	private static String DB_URL = "jdbc:mysql://localhost:3306/" + DB_NAME + "?autoReconnect=true&useSSL=false";
 	public static Connection connection;

@@ -141,13 +141,13 @@ button:hover {
 				id="Diachicongty" required>
 			<div>
 				<label for="psw-repeat"><b>Mức thu nhập </b><a
-					style="color: red;">(*)</a></label> <input required type="radio" name="Mucluong"
+					style="color: red;">(*)</a></label> <input id="mucluong1" required type="radio" name="Mucluong"
 					value="1 Trieu den 5 trieu"> <label for="Mucluong">1
-					triệu - 5 triệu</label> <input type="radio" name="Mucluong"
+					triệu - 5 triệu</label> <input type="radio" name="Mucluong" id="mucluong2"
 					value="tu 5 den 10 trieu "> <label for="Mucluong">từ
-					5 triệu đến 10 triệu</label> <input type="radio" name="Mucluong"
+					5 triệu đến 10 triệu</label> <input type="radio" name="Mucluong" id="mucluong3"
 					value="tu 10 den 20 trieu"> <label for="Mucluong">từ
-					10 triệu đến 20 triệu</label> <input type="radio" name="Mucluong"
+					10 triệu đến 20 triệu</label> <input type="radio" name="Mucluong" id="mucluong4"
 					value="tren 20 trieu "> <label for="Mucluong">trên
 					20 triệu</label>
 			</div>
@@ -155,12 +155,12 @@ button:hover {
 			<div>
 				<label for="psw-repeat"><b>Mức chi tiêu hằng tháng </b><a
 					style="color: red;">(*)</a></label> <input required type="radio"
-					name="Chitieuhangthang" value="1 trieu den 5 trieu"> <label
-					for="Chitieuhangthang">1 triệu - 5 triệu</label> <input
+					name="Chitieuhangthang" id="Chitieuhangthang1" value="1 trieu den 5 trieu"> <label
+					for="Chitieuhangthang">1 triệu - 5 triệu</label> <input id="Chitieuhangthang2"
 					type="radio" name="Chitieuhangthang" value="tu 5 den 10 trieu">
-				<label for="Chitieuhangthang">từ 5 triệu đến 10 triệu</label> <input
+				<label for="Chitieuhangthang">từ 5 triệu đến 10 triệu</label> <input id="Chitieuhangthang3"
 					type="radio" name="Chitieuhangthang" value="tu 10 den 20 trieu">
-				<label for="Chitieuhangthang">từ 10 triệu đến 20 triệu</label> <input
+				<label for="Chitieuhangthang">từ 10 triệu đến 20 triệu</label> <input id="Chitieuhangthang4"
 					type="radio" name="Chitieuhangthang" value="tren 20 trieu">
 				<label for="Chitieuhangthang">trên 20 triệu</label>
 			</div>
@@ -168,7 +168,7 @@ button:hover {
 			<div class="clearfix">
 					<input type="hidden" name="cusname" value="<%=cusName%>">
 				<button type="button" class="cancelbtn" onclick="cancel()">Cancel</button>
-				<button type="submit" class="signupbtn">Submit</button>
+				<button id="add_tk_button" type="submit" class="signupbtn">Submit</button>
 			</div>
 		</div>
 	</form>

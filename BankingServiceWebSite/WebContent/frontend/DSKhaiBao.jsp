@@ -88,6 +88,12 @@ button:hover {
           </script><%
       } 
       %>
+      <% if(request.getParameter("addtkmess") !=null && request.getParameter("addtkmess").equalsIgnoreCase("success")){
+          %><script>
+          	window.alert("Thêm tờ khai thành Công!!!");
+          </script><%
+      } 
+      %>
 <%
 String customerIDStr = request.getParameter("customerid");
 String cusName = request.getParameter("cusname");
@@ -106,10 +112,10 @@ if(customerIDStr != null && customerIDStr.length()>0){
 
 %>
 	<div style='margin-top: 20px; margin-bottom: 20px'>
-		<button onclick="location.href='userInfo.jsp?name=<%=cusName%>';">Quay lại</button>
+		<button onclick="location.href='userInfoForKhaiBao.jsp?name=<%=cusName%>';">Quay lại</button>
 	</div>
 
-<a href="./KhaiBao.jsp?customerid=<%=customerIDStr %>&cusname=<%=cusName%>"><button>Thêm mới</button></a>
+<a id="" href="./KhaiBao.jsp?customerid=<%=customerIDStr %>&cusname=<%=cusName%>"><button>Thêm mới</button></a>
 <p>Thông tin Khách hàng</p>
 			<table>
 				<thead>
@@ -133,7 +139,11 @@ if(customerIDStr != null && customerIDStr.length()>0){
 				</tbody>
 
 			</table>
-<p>Danh sách tờ khai</p>
+<%
+	if(tk.size() <1){ %>
+		<h1 id="no_khaibao_text">Khách hàng chưa khai báo thông tin vay</h1>
+	<%}else{ %>
+		<p>Danh sách tờ khai</p>
     <table>
 		<thead>
 			<tr>
@@ -161,13 +171,15 @@ if(customerIDStr != null && customerIDStr.length()>0){
 					<td><%=u.getMucluong() %></td>
 					<td><%=u.getChitieuhangthang() %></td>
 					<td><%=u.getCreatedAt().toString() %></td>
-					<td><a href="deleteToKhai.jsp?id=<%=u.getID() %>&customerid=<%=customerIDStr %>&cusname=<%=cusName%>"><button>Xóa</button></a></td>
+					<td><a id="delete_tk_button" href="deleteToKhai.jsp?id=<%=u.getID() %>&customerid=<%=customerIDStr %>&cusname=<%=cusName%>"><button>Xóa</button></a></td>
 					<td><a href="EditToKhai.jsp?tkid=<%=u.getID() %>&customerid=<%=customerIDStr %>"><button>Sửa</button></a></td>
-					<td><a href="VayLai.jsp?customerid=<%=customerIDStr%>&tkid=<%=u.getID()%>&cusname=<%=cusName%>"><button>Chọn</button></a></td>
+					<td><a id="select_tk_button" href="VayLai.jsp?customerid=<%=customerIDStr%>&tkid=<%=u.getID()%>&cusname=<%=cusName%>"><button>Chọn</button></a></td>
 				</tr>
 			<%} %>
 		</tbody>
 		
 	</table>
+	<% }
+%>
 </body>
 </html>
