@@ -47,7 +47,7 @@ button:hover {
     <%}%>
     
 	<div style='margin-top: 20px'>
-		<a href="main.jsp"><button>Quay lại</button></a>
+		<a id="quay_lai_trang_chu" href="main.jsp"><button>Quay lại</button></a>
 	</div>
 	
 	<h2>Tìm kiếm khách hàng</h2>
