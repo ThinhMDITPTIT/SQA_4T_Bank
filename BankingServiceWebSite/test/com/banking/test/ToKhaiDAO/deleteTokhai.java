@@ -14,25 +14,30 @@ class deleteTokhai extends DAO {
 	// test delete Tokhai change enable prop to false
 	@Test
 	void test() throws SQLException {
-
+		connection.setAutoCommit(false);
 		boolean result = true;
 
-		int tkID = 1;
-		ToKhaiDAO toKhaiDAO = new ToKhaiDAO();
-		boolean resultTest = toKhaiDAO.deleteToKhai(tkID);
-		assertEquals(resultTest, result);
+		try {
+			int tkID = 1;
+			ToKhaiDAO toKhaiDAO = new ToKhaiDAO();
+			boolean resultTest = toKhaiDAO.deleteToKhai(tkID);
+			assertEquals(resultTest, result);
+		}
+		finally {
+			connection.rollback();
+			
+		}
 
 	}
 
 	// delete Tokhai isn`t exist
 	@Test
 	void test2() throws SQLException {
-		boolean result = false;
+		boolean result1 = false;
 		int tkID = 99;
 		ToKhaiDAO toKhaiDAO = new ToKhaiDAO();
 		boolean resultTest = toKhaiDAO.deleteToKhai(tkID);
-		assertEquals(resultTest, result);
-
+		assertEquals(resultTest, result1);
 	}
 
 }

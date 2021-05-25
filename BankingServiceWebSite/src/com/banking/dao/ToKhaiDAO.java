@@ -66,8 +66,15 @@ public class ToKhaiDAO extends DAO {
 		try (PreparedStatement pre = connection.prepareStatement(sql)) {
 			pre.setBoolean(1, false);
 			pre.setInt(2, tkID);
-			pre.executeUpdate();
-			kq = true;
+			int rs= pre.executeUpdate();
+			System.out.println(rs);
+			if(rs == 1) {
+				kq = true;
+			}
+			else {
+				kq = false;
+			}
+			
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
@@ -113,8 +120,11 @@ public class ToKhaiDAO extends DAO {
 			pre.setString(5, tk.getMucluong());
 			pre.setString(6, tk.getChitieuhangthang());
 			pre.setInt(7, tk.getID());
-			pre.executeUpdate();
-			kq = true;
+			int rs = pre.executeUpdate();
+			if(rs == 1){
+				kq = true;
+			}
+			kq =false;
 		} catch (SQLException e) {
 			System.out.println(e);
 		}

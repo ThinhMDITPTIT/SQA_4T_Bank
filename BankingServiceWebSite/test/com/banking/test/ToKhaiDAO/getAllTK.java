@@ -47,7 +47,7 @@ class getAllTK {
 
 		ToKhaiDAO toKhaiDAO = new ToKhaiDAO();
 		tokhaiDataDB = toKhaiDAO.getAllToKhai(customerID);
-		assertEquals(tokhaiDataDB.size(), 7);
+		assertEquals(tokhaiDataDB.size(), 6);
 		for (int i = 0; i < 3; i++) {
 			assertEquals(tokhaiDataTest.get(i).getID(), tokhaiDataDB.get(i).getID());
 			assertEquals(tokhaiDataTest.get(i).getNghenghiep(), tokhaiDataDB.get(i).getNghenghiep());
@@ -63,7 +63,7 @@ class getAllTK {
 	// Test customer haven`t To Khai
 	@Test
 	void test2() {
-		int customerID = 2;
+		int customerID = 99;
 		ArrayList<ToKhai> tokhaiDataDB = new ArrayList<ToKhai>();
 		ToKhaiDAO toKhaiDAO = new ToKhaiDAO();
 		tokhaiDataDB = toKhaiDAO.getAllToKhai(customerID);

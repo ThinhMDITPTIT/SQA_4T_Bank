@@ -21,13 +21,13 @@ class addUser extends DAO {
 		try {
 			Users user = new Users();
 			user.setFullName("Truong Dinh Tien");
-			user.setCccd("017351221");
+			user.setCccd("0123124155114141");
 			user.setPhone("0385676597");
 			user.setEmail("tientruong@gmail.com");
 			user.setAddress("Thanh Xuan - Ha Noi");
 			user.setDob("1997-03-16");
 			Cmnd cmnd = new Cmnd();
-			cmnd.setSoCmnd("017351221");
+			cmnd.setSoCmnd("0123124155114141");
 			cmnd.setNgaycap("2012-04-02");
 			cmnd.setNoiCap("Ha noi");
 			cmnd.setDCThuongTru("Thanh Xuan - Ha noi");
