@@ -28,7 +28,6 @@ class checkLogin {
 		assertEquals(usersDAO.checkLogin(username, password), kq);
 	}
 
-	// username and Password are incorrect
 	@Test
 	void testLoginFail() throws ClassNotFoundException, SQLException {
 		boolean kq = false;

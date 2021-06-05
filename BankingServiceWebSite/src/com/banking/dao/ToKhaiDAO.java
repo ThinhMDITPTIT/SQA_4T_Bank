@@ -5,6 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import org.openqa.selenium.By;
+
 import com.banking.entity.ToKhai;
 import com.banking.entity.Users;
 
@@ -124,7 +126,9 @@ public class ToKhaiDAO extends DAO {
 			if(rs == 1){
 				kq = true;
 			}
-			kq =false;
+			else {
+				kq=false;
+			}
 		} catch (SQLException e) {
 			System.out.println(e);
 		}

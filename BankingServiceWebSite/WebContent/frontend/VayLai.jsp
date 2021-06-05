@@ -70,8 +70,8 @@ if(customerIDStr != null && customerIDStr.length()>0){
 						<td>CMND/CCCD</td>
 						<td>Nơi Cấp</td>
 						<td>Ngày cấp</td>
-						<td>Phone</td>
-						<td>Address</td>
+						<td>Số điện thoại</td>
+						<td>Địa chỉ</td>
 					</tr>
 				</thead>
 				<tbody>

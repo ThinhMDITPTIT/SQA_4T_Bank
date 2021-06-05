@@ -7,6 +7,14 @@
 <!DOCTYPE html>
 <html>
 <style>
+table, th, td {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+table {
+	border-spacing: 3px;
+}
 body {
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -110,8 +118,8 @@ button:hover {
 						<td>Họ tên</td>
 						<td>Email</td>
 						<td>CMND/CCCD</td>
-						<td>Phone</td>
-						<td>Address</td>
+						<td>Số điện thoại</td>
+						<td>Địa chỉ hiện tại</td>
 					</tr>
 				</thead>
 				<tbody>

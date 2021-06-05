@@ -123,8 +123,8 @@ if(customerIDStr != null && customerIDStr.length()>0){
 						<td>Họ tên</td>
 						<td>Email</td>
 						<td>CMND/CCCD</td>
-						<td>Phone</td>
-						<td>Address</td>
+						<td>Số Điện thoại</td>
+						<td>Địa chỉ</td>
 					</tr>
 				</thead>
 				<tbody>

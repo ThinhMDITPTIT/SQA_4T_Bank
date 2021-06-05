@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DAO {
-	private static String DB_NAME = "sqa";
+	private static String DB_NAME = "spademo";
 	private static String USER_NAME = "root";
 	private static String PASSWORD = "t160397";
 
@@ -22,6 +22,10 @@ public class DAO {
 				ex.printStackTrace();
 			}
 		}
+	}
+	
+	public static Connection getConnection() {
+		return connection;
 	}
 
 	public static void main(String[] args) {

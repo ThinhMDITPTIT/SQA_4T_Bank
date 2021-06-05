@@ -9,6 +9,23 @@
 <!DOCTYPE html>
 <html>
 <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+table, th, td {
+	  border: 1px solid black;
+	}
+	table {
+	  border-spacing: 3px;
+	}
 body {
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -166,27 +183,27 @@ button:hover {
 				<input type="text" value="<%=tk.getDiachicongty() %>" name="Diachicongty"id="Diachicongty" required>
 			<div>
 				<label for="psw-repeat"><b>Mức thu nhập </b><a
-					style="color: red;">(*)</a></label> <input type="radio" name="Mucluong" required
+					style="color: red;">(*)</a></label> <input type="radio" name="Mucluong" required <%=tk.getMucluong().equalsIgnoreCase("1 Trieu den 5 trieu")?"checked":"" %>
 					id="mucluong1" value="1 Trieu den 5 trieu"> <label for="Mucluong">1
-					triệu - 5 triệu</label> <input type="radio" name="Mucluong" id="mucluong2"
-					value="tu 5 den 10 trieu "> <label for="Mucluong">từ
-					5 triệu đến 10 triệu</label> <input type="radio" name="Mucluong" id="mucluong3"
-					value="tu 10 den 20 trieu "> <label for="Mucluong">từ
-					10 triệu đến 20 triệu</label> <input type="radio" name="Mucluong" id="mucluong4"
-					value="tren 20 trieu "> <label for="Mucluong">trên
+					triệu - 5 triệu</label> <input type="radio" name="Mucluong" id="mucluong2" <%=tk.getMucluong().equalsIgnoreCase("tu 5 den 10 trieu")?"checked":"" %>
+					value="tu 5 den 10 trieu"> <label for="Mucluong">từ
+					5 triệu đến 10 triệu</label> <input type="radio" name="Mucluong" id="mucluong3" <%=tk.getMucluong().equalsIgnoreCase("tu 10 den 20 trieu")?"checked":"" %>
+					value="tu 10 den 20 trieu"> <label for="Mucluong">từ
+					10 triệu đến 20 triệu</label> <input type="radio" name="Mucluong" id="mucluong4" <%=tk.getMucluong().equalsIgnoreCase("tren 20 trieu")?"checked":"" %>
+					value="tren 20 trieu"> <label for="Mucluong">trên
 					20 triệu</label>
 			</div>
 			<br>
 			<div>
 				<label for="psw-repeat"><b>Mức chi tiêu hằng tháng </b><a
-					style="color: red;">(*)</a></label> <input type="radio" required
-					id="chitieu1" name="Chitieuhangthang" value=" 1 Trieu den 5 trieu"> <label
-					for="Chitieuhangthang">1 triệu - 5 triệu</label> <input id="chitieu2"
-					type="radio" name="Chitieuhangthang" value="tu 5 den 10 trieu ">
-				<label for="Chitieuhangthang">từ 5 triệu đến 10 triệu</label> <input id="chitieu3"
-					type="radio" name="Chitieuhangthang" value="tu 10 den 20 trieu ">
-				<label for="Chitieuhangthang">từ 10 triệu đến 20 triệu</label> <input id="chitieu4"
-					type="radio" name="Chitieuhangthang" value="tren 20 trieu ">
+					style="color: red;">(*)</a></label> <input type="radio" required <%=tk.getChitieuhangthang().equalsIgnoreCase("1 Trieu den 5 trieu")?"checked":"" %>
+					id="chitieu1" name="Chitieuhangthang" value="1 Trieu den 5 trieu"> <label
+					for="Chitieuhangthang">1 triệu - 5 triệu</label> <input id="chitieu2" <%=tk.getChitieuhangthang().equalsIgnoreCase("tu 5 den 10 trieu")?"checked":"" %>
+					type="radio" name="Chitieuhangthang" value="tu 5 den 10 trieu">
+				<label for="Chitieuhangthang">từ 5 triệu đến 10 triệu</label> <input id="chitieu3" <%=tk.getChitieuhangthang().equalsIgnoreCase("tu 10 den 20 trieu")?"checked":"" %>
+					type="radio" name="Chitieuhangthang" value="tu 10 den 20 trieu">
+				<label for="Chitieuhangthang">từ 10 triệu đến 20 triệu</label> <input id="chitieu4" <%=tk.getChitieuhangthang().equalsIgnoreCase("tren 20 trieu")?"checked":"" %>
+					type="radio" name="Chitieuhangthang" value="tren 20 trieu">
 				<label for="Chitieuhangthang">trên 20 triệu</label>
 			</div>
 

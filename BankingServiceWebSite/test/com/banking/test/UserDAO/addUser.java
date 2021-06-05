@@ -37,11 +37,9 @@ class addUser extends DAO {
 			assertEquals(usersDAO.addCustomer(user), kq);
 		} finally {
 			connection.rollback();
-			connection.close();
 		}
 	}
 
-	// Chỉ add bảng User k add bảng CMND
 	@Test
 	void test2() throws ClassNotFoundException, SQLException {
 		boolean kq = false;
@@ -54,5 +52,6 @@ class addUser extends DAO {
 		user.setDob("1997-03-16");
 		UsersDAO usersDAO = new UsersDAO();
 		assertEquals(usersDAO.addCustomer(user), kq);
+		connection.close();
 	}
 }

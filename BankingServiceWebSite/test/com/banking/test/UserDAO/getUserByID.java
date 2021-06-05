@@ -29,7 +29,6 @@ class getUserByID {
 		assertEquals(userFromDB.getEmail(), userTest.getEmail());
 	}
 
-	// get User with id not exist
 	@Test
 	void test1() {
 		int userID = 99;

@@ -13,12 +13,12 @@ class TestIsAdmin {
 	@Test
 	void test() throws ClassNotFoundException, SQLException {
 		boolean kq = true;
-		String username = "thangvu99";
+		String username = "thinhme99";
 		UsersDAO usersDAO = new UsersDAO();
 		assertEquals(usersDAO.isAdmin(username), kq);
 	}
 
-	// check user isn`t Admin
+	
 	@Test
 	void test1() throws ClassNotFoundException, SQLException {
 		boolean kq = false;
@@ -27,7 +27,7 @@ class TestIsAdmin {
 		assertEquals(usersDAO.isAdmin(username), kq);
 	}
 
-	// check user isn`t exist
+	
 	@Test
 	void test2() throws ClassNotFoundException, SQLException {
 		boolean kq = false;

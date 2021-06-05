@@ -13,7 +13,7 @@ class getAllTK {
 
 	@Test
 	void test() {
-		int customerID = 1;
+		int customerID = 2;
 		ArrayList<ToKhai> tokhaiDataTest = new ArrayList<ToKhai>();
 		ArrayList<ToKhai> tokhaiDataDB = new ArrayList<ToKhai>();
 		ToKhai tk1 = new ToKhai();
@@ -22,8 +22,8 @@ class getAllTK {
 		tk1.setChucvu("sinh vien");
 		tk1.setDiachicongty("thanh xuan");
 		tk1.setTencongty("PTIT");
-		tk1.setMucluong("1 trieu den 5 trieu");
-		tk1.setChitieuhangthang("1 Trieu den 5 trieu");
+		tk1.setMucluong("tu 10 den 20 trieu");
+		tk1.setChitieuhangthang("tu 5 den 10 trieu");
 		tokhaiDataTest.add(tk1);
 		ToKhai tk2 = new ToKhai();
 		tk2.setID(2);
@@ -47,7 +47,7 @@ class getAllTK {
 
 		ToKhaiDAO toKhaiDAO = new ToKhaiDAO();
 		tokhaiDataDB = toKhaiDAO.getAllToKhai(customerID);
-		assertEquals(tokhaiDataDB.size(), 6);
+		assertEquals(tokhaiDataDB.size(), 7);
 		for (int i = 0; i < 3; i++) {
 			assertEquals(tokhaiDataTest.get(i).getID(), tokhaiDataDB.get(i).getID());
 			assertEquals(tokhaiDataTest.get(i).getNghenghiep(), tokhaiDataDB.get(i).getNghenghiep());
@@ -60,7 +60,7 @@ class getAllTK {
 
 	}
 
-	// Test customer haven`t To Khai
+
 	@Test
 	void test2() {
 		int customerID = 99;

@@ -75,6 +75,12 @@ input.specific:hover {
           </script><%
       } 
       %>
+      <%	if(request.getParameter("isEmail") !=null && request.getParameter("isEmail").equalsIgnoreCase("fail")){
+          %><script>
+          	window.alert("Email không đúng định dạng!!!");
+          </script><%
+      } 
+      %>
       <div style='margin-top: 20px'>
 		<a id="cancel_button" href="searchUser.jsp"><button>Quay lại</button></a>
 	</div>
@@ -139,7 +145,7 @@ input.specific:hover {
 				<tr>
 					<td>Email:</td>
 					<td><input 
-						type="email"
+						
 						placeholder="abcxyz@abc.xyz"
 						style="width: 200px" name="email" id="email" required /> <a
 						style="color: red;">(*)</a></td>

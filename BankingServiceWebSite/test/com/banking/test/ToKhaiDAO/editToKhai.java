@@ -33,7 +33,7 @@ class editToKhai extends DAO {
 		}
 	}
 
-	// test Update a Tokhai isn`t exist
+	
 	@Test
 	void test1() throws SQLException {
 		boolean resultTest = false;

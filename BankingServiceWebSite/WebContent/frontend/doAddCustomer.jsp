@@ -1,3 +1,4 @@
+<%@page import="com.banking.model.ValidateEmailModel"%>
 <%@page import="com.banking.dao.UsersDAO"%>
 <%@page import="com.banking.dao.CmndDAO"%>
 <%@page import="com.banking.entity.Users"%>
@@ -27,15 +28,23 @@
 	customer.setEmail(email);
 	customer.setAddress(dchientai);
 	
-	CmndDAO cmndDAO= new CmndDAO();
-	UsersDAO usersDAO = new UsersDAO();
-	boolean kqAddCmnd = cmndDAO.addCmnd(cmndEntity);
-	if(kqAddCmnd){
-		boolean kqAddCustomer = usersDAO.addCustomer(customer);
-		if(kqAddCustomer){
-			response.sendRedirect("./searchUserForKhaiBao.jsp?mess=success");
+	ValidateEmailModel validateEmailModel = new ValidateEmailModel();
+	boolean isEmail = validateEmailModel.isEmail(email);
+	
+	if(isEmail){
+		CmndDAO cmndDAO= new CmndDAO();
+		UsersDAO usersDAO = new UsersDAO();
+		boolean kqAddCmnd = cmndDAO.addCmnd(cmndEntity);
+		if(kqAddCmnd){
+			boolean kqAddCustomer = usersDAO.addCustomer(customer);
+			if(kqAddCustomer){
+				response.sendRedirect("./searchUserForKhaiBao.jsp?mess=success");
+			}
+		}else{
+			response.sendRedirect("addCustomer.jsp?mess=fail");
 		}
 	}else{
-		response.sendRedirect("addCustomer.jsp?mess=fail");
+		response.sendRedirect("addCustomer.jsp?isEmail=fail");
 	}
+	
 %>

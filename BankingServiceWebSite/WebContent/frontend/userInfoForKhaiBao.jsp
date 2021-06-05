@@ -71,9 +71,9 @@ button:hover {
 	<div style='margin-top: 20px'>
 		<a href="searchUserForKhaiBao.jsp"><button>Quay lại</button></a>
 	</div>
-	<h2>Danh sách khách hàng</h2>
 	
-	<%if(name != null && name.length()>0) {%>
+	<%if(listUser.size()>0) {%>
+	<h2>Danh sách khách hàng</h2>
 	<table>
 		<thead style="text-align: center">
 			<tr>
@@ -97,6 +97,9 @@ button:hover {
 		</tbody>
 		
 	</table>
-	<% } %>
+	<% } else{%>
+		<h1 id="no_kh_text">Không tìm thấy khách hàng</h1>
+	<%}
+	%>
 </body>
 </html>

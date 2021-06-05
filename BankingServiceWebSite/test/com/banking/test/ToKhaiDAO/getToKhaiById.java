@@ -36,7 +36,6 @@ class getToKhaiById extends DAO {
 
 	}
 
-	// get a Tokhai isn`t exist
 	@Test
 	void test1() throws SQLException {
 

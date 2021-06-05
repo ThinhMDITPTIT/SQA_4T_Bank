@@ -47,5 +47,14 @@ public class CmndDAO extends DAO {
 		}
 		return cmnd;
 	}
+	public void deleteCmnd(String SoCmnd) {
+		String sql = "DELETE FROM `cmnd` WHERE SoCMND = ? ;";
+		try (PreparedStatement pre = connection.prepareStatement(sql)) {
+			pre.setString(1, SoCmnd);
+			ResultSet rs = pre.executeQuery();
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+	}
 
 }

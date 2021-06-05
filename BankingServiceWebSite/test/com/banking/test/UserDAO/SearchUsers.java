@@ -32,7 +32,6 @@ class SearchUsers {
 
 	}
 
-	// Test search user not exist
 	@Test
 	void test1() throws ClassNotFoundException, SQLException {
 		String name = "Truong Van Nam";
